@@ -1,0 +1,45 @@
+/* estilos especificos menu  */
+.menu{
+    background-color: yellow;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+.menu__title{
+    color: blue;
+    border: 2px solid blue;
+    padding: .3rem 1.5rem;
+    font-weight: bolder;
+}
+.menu__title:hover{
+    background-color: white;
+}
+.menu__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.menu__item:hover{
+    background-color: white;
+}
+.menu__item{
+    font-weight: bold;
+    list-style: none;
+    padding: .5rem 1.5rem ;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+.menu__item--main{
+    border: blue 2px solid;
+}
+.menu__link{
+    color: black;
+    text-decoration: none;
+}
+.menu__link--main{
+    color: blue;
+}

@@ -1,0 +1,23 @@
+.product__page{
+    padding: 2rem;
+}
+.product--page{
+    flex-direction: row;
+}
+.product__page--img{
+    padding: 2rem;
+    width: 100%;
+    height: 350px;
+}
+.product__description{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 2rem;
+}
+

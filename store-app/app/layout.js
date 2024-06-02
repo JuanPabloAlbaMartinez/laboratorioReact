@@ -1,4 +1,6 @@
-import Menu from "../components/Menu";
+import Menu from "../components/Menu"
+
+import "./styles/globalStyle.css"
 
 // tipo grafia 
 import {Roboto} from "next/font/google"
@@ -21,9 +23,13 @@ export default function RootLayout({ children }) {
     <html lang="es">
       {/* componente inicial y que haga uso de la tipografia*/}
       <body className={font.className}>
-        <h1>Taller React</h1>
+        <h1 className="title">Taller React</h1>
+        {/* menu de las paginas  */}
         <Menu/>
+        {/* contenido de la pagina  */}
         {children}
+        
+        
       </body>
     </html>
   )

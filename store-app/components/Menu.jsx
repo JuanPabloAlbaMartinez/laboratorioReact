@@ -1,21 +1,24 @@
 import Link from "next/link"
+import "@/app/styles/styleMenu.css"
 
 // componente MENU PRINCIPAL
 
 function Menu() {
     return (
-        <nav>
-            <h2>Logo</h2>
-            <ul>
-                <li>
+        <nav className="menu">
+            <Link className="link" href="/">
+                <h2 className="menu__title">Logo</h2>
+            </Link>
+            <ul className="menu__list">
+                <li className="menu__item menu__item--main">
                     {/* etiqueta link reemplaza a al etiqueta a  */}
-                    <Link href="/">Home</Link>
+                    <Link className="menu__link menu__link--main" href="/">Home</Link>
                 </li>
-                <li>
-                    <Link href="/category">Category</Link>
+                <li className="menu__item">
+                    <Link className="menu__link" href="/category">Category</Link>
                 </li>
-                <li>
-                    <Link href="/shopCar">Shoping Cart</Link>
+                <li className="menu__item">
+                    <Link className="menu__link" href="/shopCar">Shoping Cart</Link>
                 </li>
             </ul>
         </nav>
