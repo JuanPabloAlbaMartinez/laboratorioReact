@@ -15,7 +15,9 @@ function Menu() {
                     <Link className="menu__link menu__link--main" href="/">Home</Link>
                 </li>
                 <li className="menu__item">
-                    <Link className="menu__link" href="/category">Category</Link>
+                    <Link className="menu__link" href="/category">
+                        Category
+                    </Link>
                 </li>
                 <li className="menu__item">
                     <Link className="menu__link" href="/shopCar">Shoping Cart</Link>

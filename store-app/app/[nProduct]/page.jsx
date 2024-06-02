@@ -19,11 +19,14 @@ async function page({ params }) {
       <section className="product product--page">
         <img className="product__page--img" src={productPost.image} alt="Image" />
         <section className="product__description">
-          <h3>{productPost.id} {productPost.title}</h3>
-          <p>Categoria: {productPost.category}</p>
-          <p>Precio Del Producto:  {productPost.price}</p>
-          <p>Descripcion Del Producto: {productPost.description}</p>
-          <button className="product__btn" onClick={() => { alert("aaaa") }}>Comprar</button>
+          <h2 className="menu__title">{productPost.title}</h2>
+          <h3>Categoria:</h3>
+          <p>{productPost.category}</p>
+          <h3>Precio Del Producto:</h3>
+          <p>${productPost.price}</p>
+          <h3>Descripcion Del Producto:</h3>
+          <p>{productPost.description}</p>
+          <button className="product__btn product__btn--page" onClick={() => { alert("aaaa") }}>Comprar</button>
         </section>
        
       </section>
