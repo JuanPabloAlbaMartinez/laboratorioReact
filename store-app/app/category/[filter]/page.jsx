@@ -13,9 +13,11 @@ export default async function page({params}) {
 
     const categoryProducts= await loadFilter(params.filter);
     console.log("llega",categoryProducts)
+    // categoria a la que me dirijo
+    let titleCategory = params.filter
     return (
         <div>
-            <h2 className="title">{params.filter}</h2>
+            <h2 className="title">{titleCategory}</h2>
             <section className="main">
                 {
                     categoryProducts.map((product) => (
