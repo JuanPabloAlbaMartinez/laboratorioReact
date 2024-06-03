@@ -1,9 +1,19 @@
 import Link from "next/link"
+import SubMenu from "./SubMenu"
 import "@/app/styles/styleMenu.css"
 
-// componente MENU PRINCIPAL
+// fetch de categorias 
 
-function Menu() {
+async function loadCategory() {
+    const response = await fetch('https://fakestoreapi.com/products/categories');
+    const data = await response.json();
+    return data;
+}
+
+
+// componente MENU PRINCIPAL
+async function Menu() {
+    const categorys = await loadCategory();
     return (
         <nav className="menu">
             <Link className="link" href="/">
@@ -12,15 +22,16 @@ function Menu() {
             <ul className="menu__list">
                 <li className="menu__item menu__item--main">
                     {/* etiqueta link reemplaza a al etiqueta a  */}
-                    <Link className="menu__link menu__link--main" href="/">Home</Link>
+                    <Link className="link" href="/">Home</Link>
+                </li>
+                <li className="menu__item menu__item--category">
+                    Category
+                    {
+                        <SubMenu categorys={categorys}/>
+                    }
                 </li>
                 <li className="menu__item">
-                    <Link className="menu__link" href="/category">
-                        Category
-                    </Link>
-                </li>
-                <li className="menu__item">
-                    <Link className="menu__link" href="/shopCar">Shoping Cart</Link>
+                    <Link className="link" href="/shopCar">Shoping Cart</Link>
                 </li>
             </ul>
         </nav>

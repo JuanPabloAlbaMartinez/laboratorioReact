@@ -28,7 +28,6 @@ async function page({ params }) {
           <p>{productPost.description}</p>
           <button className="product__btn product__btn--page" onClick={() => { alert("aaaa") }}>Comprar</button>
         </section>
-       
       </section>
     </section>
   )
