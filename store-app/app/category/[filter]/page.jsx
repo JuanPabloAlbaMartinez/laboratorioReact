@@ -13,6 +13,7 @@ export default async function page({params}) {
 
     const categoryProducts= await loadFilter(params.filter);
     console.log("llega",categoryProducts)
+ 
     // categoria a la que me dirijo
 
     // decodeURIComponent: es un metodo que decodifica una url y la converite a texto normal (Javascript)
@@ -23,7 +24,7 @@ export default async function page({params}) {
             <section className="main">
                 {
                     categoryProducts.map((product) => (
-                        <AllProducts product={product} key={product.category}/>
+                        <AllProducts product={product} />
                     ))
                 }
             </section>

@@ -1,6 +1,7 @@
 'use client'
 
 import "@/app/styles/styleProduct.css"
+import BtnShop from "@/components/BtnShop";
 
 // cargamos la peticion a la API 
 async function loadProduct(id) {
@@ -14,6 +15,7 @@ async function loadProduct(id) {
 async function page({ params }) {
   // le pasamos la pagina a donde nos direccionamos 
   const productPost = await loadProduct(params.nProduct);
+  
   return (
     <section className="product__page">
       <section className="product product--page">
@@ -26,7 +28,8 @@ async function page({ params }) {
           <p>${productPost.price}</p>
           <h3>Descripcion Del Producto:</h3>
           <p>{productPost.description}</p>
-          <button className="product__btn product__btn--page" onClick={() => { alert("aaaa") }}>Comprar</button>
+          <BtnShop product={productPost}/>
+          {/* <button className="product__btn product__btn--page" onClick={() => { alert("aaaa") }}>Comprar</button> */}
         </section>
       </section>
     </section>

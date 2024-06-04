@@ -6,7 +6,7 @@ export default function Submenu({ categorys }) {
         <ul className="subMenu">
             {
                 categorys.map((category,i) => (
-                    <li className="subMenu__item" id="i">
+                    <li className="subMenu__item" key={i}>
                         <Link className="link" category={category} href={`/category/${category}`}>{category}</Link>
                     </li>
                 ))

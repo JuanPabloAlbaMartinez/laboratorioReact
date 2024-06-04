@@ -3,14 +3,11 @@ import SubMenu from "./SubMenu"
 import "@/app/styles/styleMenu.css"
 
 // fetch de categorias 
-
 async function loadCategory() {
     const response = await fetch('https://fakestoreapi.com/products/categories');
     const data = await response.json();
     return data;
 }
-
-
 // componente MENU PRINCIPAL
 async function Menu() {
     const categorys = await loadCategory();

@@ -1,5 +1,10 @@
-export default function page() {
+import ShoppingCart from "@/components/ShopingCart"
+
+ export default function page() {
+  
   return (
-    <div>CARRITO</div>
+    <ShoppingCart />
   )
 }
+
+

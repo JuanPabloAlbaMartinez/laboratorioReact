@@ -1,0 +1,56 @@
+.shopCar{
+    padding: 2rem;
+    background-color: #e7e7e7;
+}
+.shopCar__content{
+    flex-direction: column;
+}
+.shopCar__product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid blue;
+    border-radius: 6px ;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.shopCar__product:hover{
+    background-color: yellow;
+}
+.shopCar__description{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.shopCar__img{
+    width: 100px;
+    height: 100px;
+}
+.shopCar__btn{
+    background-color: rgb(218, 0, 0);
+    color: white;
+    border: none;
+    padding: .6rem;
+    border-radius: 6px;
+}
+.shopCar__btn:hover{
+    background-color: black;
+    color: white;
+}
+.shopCar__buy{
+    margin: 1.5rem;
+    padding: 1rem;
+    border-radius: 6px ;
+    box-shadow: 8px 8px 8px black;
+    background-color: white;
+}
+.buy__title{
+    color: blue;
+    font-size: 2rem;
+    padding: .5rem;
+}
